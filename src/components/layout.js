@@ -5,6 +5,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
+import BlueRockLogo from "../images/blue_rock_logo.jpg"
 import "./layout.css"
 
 
@@ -22,8 +23,6 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
     const [openDrawer, setOpenDrawer] = useState(false);
-    const [openSecondDrawer, setOpenSecondDrawer] = useState(false);
-
     const [dropdown, setDropdown] = useState(false);
     const [open, setOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false);
@@ -36,13 +35,10 @@ const Layout = ({ pageTitle, children }) => {
         setOpenDrawer(drawerOpen => !drawerOpen)
     }
 
-    const toggleSecondDrawer = () => {
-        setOpenSecondDrawer(openSecondDrawer => !openSecondDrawer)
-    }
 
     //navbar scroll changeBackground function
     const changeBackground = () => {
-        if (window.scrollY >= 33) {
+        if (window.scrollY >= 15) {
             setNavbarScroll(true)
         } else {
             setNavbarScroll(false)
@@ -59,30 +55,44 @@ const Layout = ({ pageTitle, children }) => {
         <div class="pagewrapper">
             <div class="topHeaderRoot">
                 <div class="topHeaderWrapper">
-                    <p>Placeholder Text</p>
-                    <p>Some more placeholder</p>
+                    <p>Placeholder Text - Example: NEW Bottle of Brand, available  this week! </p>
+                    <p>Upcoming Tasting - 9/16 @ 5:00 pm ET</p>
                 </div>
             </div>
             <header class={navbarScroll ? "navBarRootScroll" : "navBarRoot"}>
                 {navbarScroll === true ? (
                     <>
-                        <div>
+                        <div class="navScrollLogoProductWrapper">
+                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
+                            <ul class="navNoScrollProductList">
+                                {
+                                    data.allStrapiCategory.nodes.map(node => (
+                                        <li key={node.id}>
+                                            <Link to={`/${node.slug}`}>{node.name}</Link>
+                                        </li>
+                                    )
+                                    )
+                                }
+                            </ul>
+                        </div>
+                        <div class="smallVWHamburgerWrapper">
+                            <div class="contactScrollMobile">
+                                <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                                <button class="callUsButton">Call Us</button>
+                            </div>
                             <MenuIcon
                                 onClick={toggleDrawer}
                             />
-                            <MenuIcon
-                                onClick={toggleSecondDrawer}
-                                color={"red"}
-                            />
+
                             <Drawer
                                 open={openDrawer}
                                 onClose={toggleDrawer}
-                                anchor="top"
+                                anchor="right"
                                 classes={{
                                     paper: "navDrawerRoot"
                                 }}
                             >
-                                <ul>
+                                <ul class="drawerProductList">
                                     {
                                         data.allStrapiCategory.nodes.map(node => (
                                             <li key={node.id}>
@@ -94,58 +104,74 @@ const Layout = ({ pageTitle, children }) => {
                                 </ul>
 
                             </Drawer>
-                            {openSecondDrawer === true ? (
-                                <div class="secondDrawerRoot">
-
-                                    <div class="secondDrawer">
-                                        <p>second drawer</p>
-                                        <button onClick={toggleSecondDrawer}>x</button>
-                                        <ul>
-                                            {
-                                                data.allStrapiCategory.nodes.map(node => (
-                                                    <li key={node.id}>
-                                                        <Link to={`/${node.slug}`}>{node.name}</Link>
-                                                    </li>
-                                                )
-                                                )
-                                            }
-                                        </ul>
-                                    </div>
-                                </div>
-                            )
-
-                                : null}
                         </div>
-                        <Link to="/"><h1>Blue Rock Wine & Liquor</h1></Link>
+                        <div class="contactScroll">
+                            <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                            <button class="callUsButton">Call Us</button>
+                        </div>
                     </>
 
                 ) : (
                     <>
-                        <Link to="/"><h1>Blue Rock Wine & Liquor</h1></Link>
+                        <div class="navNoScrollWrapper">
+                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
+                            <ul class="navNoScrollProductList">
+                                {
+                                    data.allStrapiCategory.nodes.map(node => (
+                                        <li key={node.id}>
+                                            <Link to={`/${node.slug}`}>{node.name}</Link>
+                                        </li>
+                                    )
+                                    )
+                                }
+                            </ul>
 
-                        <ul>
-                            {
-                                data.allStrapiCategory.nodes.map(node => (
-                                    <li key={node.id}>
-                                        <Link to={`/${node.slug}`}>{node.name}</Link>
-                                    </li>
-                                )
-                                )
-                            }
-                        </ul>
+                            <div class="smallVWHamburgerWrapper">
+                                <div class="contactScrollMobile">
+                                    <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                                    <button class="callUsButton">Call Us</button>
+                                </div>
+                                <MenuIcon
+                                    onClick={toggleDrawer}
+                                />
 
+                                <Drawer
+                                    open={openDrawer}
+                                    onClose={toggleDrawer}
+                                    anchor="right"
+                                    classes={{
+                                        paper: "navDrawerRoot"
+                                    }}
+                                >
+                                    <ul class="drawerProductList">
+                                        {
+                                            data.allStrapiCategory.nodes.map(node => (
+                                                <li key={node.id}>
+                                                    <Link to={`/${node.slug}`}>{node.name}</Link>
+                                                </li>
+                                            )
+                                            )
+                                        }
+                                    </ul>
+
+                                </Drawer>
+                            </div>
+
+                        </div>
+                        <div class="contactNoScroll">
+                            <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                            <button class="callUsButton">Call Us</button>
+                        </div>
                     </>
                 )}
 
-                <div>
-                    <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                    <button>Call Us</button>
-                </div>
+
             </header>
             <main>
                 <section class="hero">
-                    <h2>Welcome to the hypest blog on the interweb. </h2><p>Checkout something cool!</p>
-                    <h2 class="pageTitle">{pageTitle}</h2>
+                    <h2>Welcome to Blue Rock Liquor, Wine & Spirits </h2><p>New Products & Tastings Weekly!</p>
+                    {pageTitle === "Home Page" ? null : <h2 class="pageTitle">{pageTitle}</h2>
+                    }
                 </section>
                 <section class="content">
                     {children}

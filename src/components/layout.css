@@ -1,18 +1,28 @@
 /*src/components/layout.css*/
 
-html, body, div, 
-h1, h2, h3, h4, h5, h6, 
-ul, li, p, img {
-	margin:0;
-	padding:0;
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+img {
+    margin: 0;
+    padding: 0;
 }
 
 img {
-	border:none;
+    border: none;
 }
 
 * {
-	box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 ul,
@@ -34,20 +44,39 @@ a:hover {
 .navBarRoot {
     display: flex;
     position: fixed;
-    top: 54px;
-    background-color: rgb(76, 57, 246);
+    top: 58px;
+    background-color: rgb(22 48 161);
     color: white;
     width: 100%;
     justify-content: space-between;
     z-index: 1;
+    height: auto;
+}
+
+.navScrollLogoProductWrapper {
+    display: flex;
 }
 
 .navBarRootScroll {
+    color: rgb(22 48 161);
+    transition: 0.5s;
+    height: auto;
+    min-height: 120px;
+    background-color: white;
     position: fixed;
     display: flex;
     width: 100%;
     top: 0;
     z-index: 2;
+}
+
+.navNoScrollWrapper {
+    display: flex;
+    padding: 1em 0.5em;
+}
+
+.navNoScrollProductList {
+    padding: 1.5em;
 }
 
 .topHeaderRoot {
@@ -96,18 +125,23 @@ header ul {
 
 header a {
     text-transform: capitalize;
-    font-size: clamp(0.8em, 2vw, 1.2em);
+    font-size: clamp(0.75em, 2vw, 1em);
 }
 
 .hero {
     height: 12em;
     text-align: center;
     padding: 2em 0;
-    margin-top: 65px;
+    margin-top: 120px;
 }
 
 .hero h2 {
     text-wrap: balance;
+}
+
+#blueRockNavLogo {
+    width: 80px;
+    border-radius: 1em;
 }
 
 .pageTitle {
@@ -129,8 +163,15 @@ header a {
 }
 
 .navDrawerRoot {
-    margin-top: 77px;
-    border: 1px solid red;
+    /* margin-top: 77px; */
+}
+
+.drawerProductList {
+    width: 250px;
+    padding: 1.5rem;
+    line-height: 2;
+    text-transform: capitalize;
+
 }
 
 .secondDrawer {
@@ -144,17 +185,19 @@ header a {
     background-color: white;
 }
 
-@media (max-width: 960px) {
-    .postlist {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.smallVWHamburgerWrapper {
+    display: none;
 }
 
-@media (max-width: 640px) {
-    .postlist {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+.contactNoScroll,
+.contactScroll,
+.contactScrollMobile {
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
 
 .postlist h3 {
     font-size: clamp(0.8em, 1.5vw, 1.5em);
@@ -195,7 +238,9 @@ header a {
     padding-left: 0.5em;
 }
 
-.date, .name, .postcategory {
+.date,
+.name,
+.postcategory {
     font-size: 0.8em;
 }
 
@@ -224,11 +269,16 @@ footer {
     flex-wrap: wrap;
 }
 
-.postcover, .postdate, .postauthor, .postcategory, .postcontent p {
+.postcover,
+.postdate,
+.postauthor,
+.postcategory,
+.postcontent p {
     padding-bottom: 1em;
 }
 
-.postdate, .postauthor {
+.postdate,
+.postauthor {
     font-size: clamp(0.6em, 1.2vw, 1.2em);
 }
 
@@ -246,4 +296,53 @@ footer h2 {
 footer p {
     font-size: clamp(0.4em, 0.8vw, 0.8em);
     font-weight: 400;
+}
+
+.callUsButton {
+    display: flex;
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 35px;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+@media (max-width: 960px) {
+    .postlist {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navNoScrollProductList {
+        display: none;
+    }
+
+    .smallVWHamburgerWrapper {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .contactNoScroll,
+    .contactScroll {
+        display: none;
+    }
+
+    .navNoScrollWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 640px) {
+    .postlist {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
