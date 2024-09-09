@@ -29,7 +29,39 @@ a:hover {
 
 .pagewrapper {
     margin: 0 auto;
-    max-width: 960px;
+}
+
+.navBarRoot {
+    display: flex;
+    position: fixed;
+    top: 54px;
+    background-color: rgb(76, 57, 246);
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.navBarRootScroll {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.topHeaderRoot {
+    position: relative;
+    top: 0;
+    margin: auto;
+    background-color: black;
+    color: white;
+}
+
+.topHeaderWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
@@ -71,6 +103,7 @@ header a {
     height: 12em;
     text-align: center;
     padding: 2em 0;
+    margin-top: 65px;
 }
 
 .hero h2 {
@@ -89,6 +122,26 @@ header a {
     row-gap: 3em;
     justify-content: center;
     justify-items: center;
+}
+
+.homePageWrapper {
+    min-height: 100vh;
+}
+
+.navDrawerRoot {
+    margin-top: 77px;
+    border: 1px solid red;
+}
+
+.secondDrawer {
+    height: 150px;
+    width: 100%;
+}
+
+.secondDrawerRoot {
+    margin-top: 200px;
+    width: 100%;
+    background-color: white;
 }
 
 @media (max-width: 960px) {

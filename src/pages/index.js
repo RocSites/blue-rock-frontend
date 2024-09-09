@@ -5,26 +5,32 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
 
-    return (
-        <Layout pageTitle="Home Page">
+  return (
+    <Layout pageTitle="Home Page">
+      <div class="homePageWrapper">
         <ul class="postlist">
-            {
-                data.allStrapiWine.nodes.map(node => (
-                    <li key={node.id}>
-                        <Link class="postlink" to={`/${node.slug}`}><h3>{node.title}</h3></Link>
-                        <div class="image-wrap">
-                        <img class="cover" src={`${node.image.localFile.url}`} alt={`Cover for ${node.title}`} />
-                        </div>
-                        <p class="date">{node.date}</p>
-                        <p class="postcategory"><Link to={`/${node.category.slug}`}>Category: {node.category.name}</Link></p>
-                        <p class="description">{node.description}</p>
-                    </li>
-                )
-                )
-            }
-            </ul>
-        </Layout>
-        )
+          {
+            data.allStrapiWine.nodes.map(node => (
+              <li key={node.id}>
+                <Link class="postlink" to={`/${node.slug}`}><h3>{node.title}</h3></Link>
+                <div class="image-wrap">
+                  <img class="cover" src={`${node.image.localFile.url}`} alt={`Cover for ${node.title}`} />
+                </div>
+                <p class="date">{node.date}</p>
+                <p class="postcategory"><Link to={`/${node.category.slug}`}>Category: {node.category.name}</Link></p>
+                <p class="description">{node.description}</p>
+              </li>
+            )
+            )
+          }
+        </ul>
+      </div>
+
+      <div id="contact">
+        Contact Us Section
+      </div>
+    </Layout>
+  )
 }
 
 export const query = graphql`
