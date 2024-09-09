@@ -25,6 +25,22 @@ const IndexPage = ({ data }) => {
             )
           }
         </ul>
+        <ul class="postlist">
+          {
+            data.allStrapiLiquor.nodes.map(node => (
+              <li key={node.id}>
+                <Link class="postlink" to={`/${node.slug}`}><h3>{node.title}</h3></Link>
+                <div class="image-wrap">
+                  <img class="cover" src={`${node.image.localFile.url}`} alt={`Cover for ${node.title}`} />
+                </div>
+                <p class="date">{node.date}</p>
+                <p class="postcategory"><Link to={`/${node.category.slug}`}>Category: {node.category.name}</Link></p>
+                <p class="description">{node.description}</p>
+              </li>
+            )
+            )
+          }
+        </ul>
       </div>
 
       <div id="contact">
@@ -50,6 +66,23 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
 query {
   allStrapiWine {
+    nodes {
+      title
+      slug
+      image {
+        url
+        localFile {
+          absolutePath
+          url
+        }
+      }
+      category {
+        name
+        slug
+      }
+    }
+  }
+  allStrapiLiquor {
     nodes {
       title
       slug
