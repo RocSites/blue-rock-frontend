@@ -162,6 +162,14 @@ header a {
     min-height: 100vh;
 }
 
+.mapWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
 .navDrawerRoot {
     /* margin-top: 77px; */
 }
@@ -310,9 +318,44 @@ footer p {
     font-size: 0.9em;
 }
 
+.contactHeader {
+    font-size: 2em;
+    text-align: center;
+}
+
+.contactPhone {
+    color:rgb(22 48 161);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.phoneIcon {
+    margin-right: 15px;
+    fill: white !important;
+    width: 25px;
+}
+
+.contactButton {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    background-color: rgb(22 48 161);
+    border-radius: 35px;
+    padding: 15px 25px;
+    text-transform: none;
+    font-size: 1em;
+    color: white;
+}
+
 @media (max-width: 960px) {
     .postlist {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mapWrapper iframe {
+        width: 90%;
+        margin: auto;
     }
 
     .navNoScrollProductList {
