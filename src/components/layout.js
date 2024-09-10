@@ -55,7 +55,7 @@ const Layout = ({ pageTitle, children }) => {
         <div class="pagewrapper">
             <div class="topHeaderRoot">
                 <div class="topHeaderWrapper">
-                    <p>Placeholder Text - Example: NEW Bottle of Brand, available  this week! </p>
+                    <p>NEW Bottle of Brand, available  this week! </p>
                     <p>Upcoming Tasting - 9/16 @ 5:00 pm ET</p>
                 </div>
             </div>

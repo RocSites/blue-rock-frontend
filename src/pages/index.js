@@ -7,12 +7,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
 
-  console.log(data)
 
   const imagesWine = data.allStrapiWine.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
   const imagesLiquor = data.allStrapiLiquor.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
-  console.log("liquor", imagesLiquor)
-  console.log("wine", imagesWine)
+
 
   return (
     <Layout pageTitle="Home Page">
@@ -23,7 +21,6 @@ const IndexPage = ({ data }) => {
               <li key={node.id}>
                 <Link class="postlink" to={`/${node.slug}`}><h3>{node.title}</h3></Link>
                 <div class="image-wrap">
-                  {console.log(imagesWine[index])}
                   <GatsbyImage class="cover" image={imagesWine[index]} alt={`Cover for ${node.title}`} />
                 </div>
                 <p class="date">{node.date}</p>

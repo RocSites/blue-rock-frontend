@@ -7,7 +7,7 @@ const BlogPost = ({ data }) => {
     return (
         <Layout pageTitle={data.strapiLiquor.title}>
             <GatsbyImage class="postcover" image={data.strapiLiquor.image.localFile.childImageSharp.gatsbyImageData} alt={`Cover for ${data.strapiLiquor.title}`} />
-            <p class="postdate">{data.strapiLiquor.date}</p>
+            <p class="postdate">{data.strapiLiquor.description}</p>
             <p class="postcategory"><Link to={`/${data.strapiLiquor.category.slug}`}>Category: {data.strapiLiquor.category.name}</Link></p>
             {/* <div class="postcontent" dangerouslySetInnerHTML={{ __html: data.strapiWine.content.data.childMarkdownRemark.html }} /> */}
         </Layout>

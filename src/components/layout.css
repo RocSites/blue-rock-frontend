@@ -93,6 +93,10 @@ a:hover {
     align-items: center;
 }
 
+.topHeaderWrapper p {
+    text-align: center;
+}
+
 body {
     font-size: 1.2em;
     line-height: 1.5;
@@ -362,6 +366,14 @@ footer p {
 }
 
 @media (max-width: 960px) {
+
+    .navBarRoot {
+        position: static;
+    }
+    .topHeaderWrapper p {
+        font-size: 0.75em;
+    }
+
     .postlist {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
