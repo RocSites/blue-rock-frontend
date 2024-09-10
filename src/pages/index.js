@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PhoneIcon from '@mui/icons-material/Phone';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
 
@@ -112,6 +112,6 @@ query {
 }
 `
 
-export const Head = () => <title>Home Page - Strapi Gatsby Blog</title>
+export const Head = () => <title>Blue Rock Liquor, Wine & Spirits</title>
 
 export default IndexPage

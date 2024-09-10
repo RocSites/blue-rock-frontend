@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 const Category = ({ data }) => {
+
     return (
             <Layout pageTitle={data.strapiCategory.name}>
         <ul class="postlist">
@@ -11,10 +14,23 @@ const Category = ({ data }) => {
                     <li key={wine.id}>
                         <Link class="winelink" to={`/${wine.slug}`}><h3>{wine.title}</h3></Link>
                         <div class="image-wrap">
-                        <img class="cover" src={wine.image.localFile.url} alt={`Cover for ${wine.title}`} />
+                        <GatsbyImage class="cover" image={wine.image.localFile.childImageSharp.gatsbyImageData} alt={`Cover for ${wine.title}`} />
                         </div>
                         <p class="date">{wine.date}</p>
                         <p class="description">{wine.description}</p>
+                    </li>
+                )
+                )
+            }
+               {
+                data.strapiCategory.liquors.map(liquor => (
+                    <li key={liquor.id}>
+                        <Link class="winelink" to={`/${liquor.slug}`}><h3>{liquor.title}</h3></Link>
+                        <div class="image-wrap">
+                        <GatsbyImage class="cover" image={liquor.image.localFile.childImageSharp.gatsbyImageData} alt={`Cover for ${liquor.title}`} />
+                        </div>
+                        <p class="date">{liquor.date}</p>
+                        <p class="description">{liquor.description}</p>
                     </li>
                 )
                 )
@@ -33,10 +49,22 @@ query ($id: String) {
       title
       id
       image {
-        url
         localFile {
-          absolutePath
-          url
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+    liquors {
+      title
+      description
+      id
+      image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
@@ -47,6 +75,6 @@ query ($id: String) {
 }
 `
 
-export const Head = ({ data }) => <title>{data.strapiCategory.name} - Strapi Gatsby Blog Site</title>
+export const Head = ({ data }) => <title>{data.strapiCategory.name} - Blue Rock Liquor, Wine & Spirits</title>
 
 export default Category
