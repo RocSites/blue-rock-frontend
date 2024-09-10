@@ -78,7 +78,7 @@ const Layout = ({ pageTitle, children }) => {
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
                                 <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                                <button class="callUsButton">Call Us</button>
+                                <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                             </div>
                             <MenuIcon
                                 onClick={toggleDrawer}
@@ -107,7 +107,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                         <div class="contactScroll">
                             <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                            <button class="callUsButton">Call Us</button>
+                            <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                         </div>
                     </>
 
@@ -129,7 +129,7 @@ const Layout = ({ pageTitle, children }) => {
                             <div class="smallVWHamburgerWrapper">
                                 <div class="contactScrollMobile">
                                     <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                                    <button class="callUsButton">Call Us</button>
+                                    <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                                 </div>
                                 <MenuIcon
                                     onClick={toggleDrawer}
@@ -160,7 +160,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                         <div class="contactNoScroll">
                             <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                            <button class="callUsButton">Call Us</button>
+                            <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                         </div>
                     </>
                 )}
@@ -179,12 +179,9 @@ const Layout = ({ pageTitle, children }) => {
             </main>
             <footer>
                 <div>
-                    <h2>About</h2>
-                    <p>Demo blog site using Strapi and Gatsby, Oct 2023</p>
-                </div>
-                <div>
-                    <h2>Article</h2>
-                    <p><a href="https://strapi.io/blog">Build a Blog Site using Strapi and Gatsby</a></p>
+                    <h2>Blue Rock Liquor, Wine & Spirits</h2>
+                    <a href="tel:5854812707">(585) 481-2707</a>
+                    <p>© {new Date().getFullYear()}</p>
                 </div>
             </footer>
         </div >
