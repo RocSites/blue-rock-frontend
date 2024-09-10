@@ -78,7 +78,7 @@ const Layout = ({ pageTitle, children }) => {
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
                                 <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                                <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
+                                <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                             </div>
                             <MenuIcon
                                 onClick={toggleDrawer}
@@ -107,7 +107,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                         <div class="contactScroll">
                             <AnchorLink to="/#contact" title="Contact"></AnchorLink>
-                            <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
+                            <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                         </div>
                     </>
 
