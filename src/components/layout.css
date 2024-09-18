@@ -1,5 +1,7 @@
 /*src/components/layout.css*/
 
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 html,
 body,
 div,
@@ -133,14 +135,190 @@ header a {
 }
 
 .hero {
-    height: 12em;
+    height: 20em;
     text-align: center;
     padding: 2em 0;
     margin-top: 120px;
+    background-image: url(../images/wine_pour_2.jpg);
+    background-size: cover;
+}
+
+.heroText {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 160%;
+    padding: 5em;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.layoutHeader {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.heroTextH1 {
+    font-size: 3em;
 }
 
 .hero h2 {
     text-wrap: balance;
+}
+
+.gridWrapper {
+    display: flex;
+}
+
+.gridWrapper > div {
+    margin: 10px 10px 0 0;
+}
+
+.menuContent {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#topRated {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/egor-myznik-wine-bottles.jpg");
+    background-size: cover;
+    color: #3aa8e4;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#tequilas {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/patron.jpg");
+    /* background-image: url("../images/casaamigos_tequial.jpg"); */
+    /* background-image: url("../images/jose_cuevo_half_page.jpg"); */
+    background-position-y: 50%;
+    background-size: cover;
+    color: black;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#staffPicks {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("../images/xxl_blackberry.jpg"); */
+    background-image: url("../images/staff_picks.jpg");
+    background-position-y: 60%;
+    background-size: cover;
+    color: white;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#newArrivals {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/wine-pour.jpg");
+    background-size: cover;
+    color: white;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#whiskey {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/johny_red.jpg");
+    background-size: cover;
+    color: white;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+
+#specials {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/jack_honey_2.jpg");
+    background-position-y: 58%;
+    background-size: cover;
+    color: #3aa8e4;
+    height: 10em;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.menuContentButton {
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid white;
+    width: 150px;
+    background-color: #3aa8e4;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menuContentText {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menuContent>img {
+    width: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.menuLink {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    font-size: 3rem;
 }
 
 #blueRockNavLogo {
@@ -407,9 +585,30 @@ footer p {
     header a {
         font-size: 0.9em;
     }
+
+    .hero {
+        margin-top: 0px;
+    }
+
+    .layoutHeader {
+        margin-top: 10px;
+    }
+
+    .heroText {
+        width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
+   
+
+    .gridWrapper {
+        flex-direction: column;
+    }
+
+    #topRated, #newArrivals, #tequilas, #whiskey, #staffPicks, #specials {
+        width: 100%;
+    }
     .postlist {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }

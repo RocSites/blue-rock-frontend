@@ -14,7 +14,61 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout pageTitle="Home Page">
-      <div class="homePageWrapper">
+      <section class="hero">
+        <div class="heroText">
+          <h1 class="heroTextH1">Trending Now</h1>
+          <button class="menuContentButton">See More</button>
+        </div>
+
+      </section>
+      <section class="gridWrapper">
+        <div id="topRated">
+          <p class="menuContentText">
+            Top Rated Wines
+          </p>
+          <button class="menuContentButton">See More</button>
+        </div>
+        <div id="newArrivals">
+          <p class="menuContentText">
+            Best Sellers
+          </p>
+          <Link to="/bestseller">
+            <button class="menuContentButton">See More</button>
+          </Link>
+        </div>
+      </section>
+      <section class="gridWrapper">
+        <div id="tequilas">
+          <p class="menuContentText">
+            Tequilas
+          </p>
+          <button class="menuContentButton">See More</button>
+        </div>
+        <div id="whiskey">
+          <p class="menuContentText">
+            Whiskeys
+          </p>
+          <button class="menuContentButton">See More</button>
+        </div>
+      </section>
+      <section class="gridWrapper">
+        <div id="staffPicks">
+          <div>
+            <p class="menuContentText">
+              Staff Picks
+            </p>
+            <button class="menuContentButton">See More</button>
+          </div>
+
+        </div>
+        <div id="specials">
+          <p class="menuContentText">
+            Specials
+          </p>
+          <button class="menuContentButton">See More</button>
+        </div>
+      </section>
+      {/* <div class="homePageWrapper">
         <ul class="postlist">
           {
             data.allStrapiWine.nodes.map((node, index) => (
@@ -47,7 +101,7 @@ const IndexPage = ({ data }) => {
             )
           }
         </ul>
-      </div>
+      </div> */}
 
       <div id="contact">
         <h1 class="contactHeader">Contact Us</h1>

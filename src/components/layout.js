@@ -168,8 +168,8 @@ const Layout = ({ pageTitle, children }) => {
 
             </header>
             <main>
-                <section class="hero">
-                    <h2>Welcome to Blue Rock Liquor, Wine & Spirits </h2><p>New Products & Tastings Weekly!</p>
+                <section class="layoutHeader">
+
                     {pageTitle === "Home Page" ? null : <h2 class="pageTitle">{pageTitle}</h2>
                     }
                 </section>
