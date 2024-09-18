@@ -3,14 +3,14 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const BestSeller = ({ data }) => {
+const StaffPicks = ({ data }) => {
 
     const dataWineObj = Object.fromEntries(Object.entries(data.allStrapiWine).map(x => x));
     const dataLiquorObj = Object.fromEntries(Object.entries(data.allStrapiLiquor).map(x => x));
 
 
     return (
-        <Layout pageTitle={`Best Sellers`}>
+        <Layout pageTitle={`Staff Picks`}>
             <ul class="postlist">
                 {
                     dataWineObj.nodes.map(wine => (
@@ -45,7 +45,7 @@ const BestSeller = ({ data }) => {
 
 export const query = graphql`
 query  {
-    allStrapiWine(filter: {bestSeller: {eq: true}}) {
+    allStrapiWine(filter: {staffPicks: {eq: true}}) {
     nodes {
       title
       slug
@@ -61,7 +61,7 @@ query  {
         slug
       }
     }
-  }  allStrapiLiquor (filter: {bestSeller: {eq: true}}) {
+  }  allStrapiLiquor (filter: {staffPicks: {eq: true}}) {
     nodes {
       title
       slug
@@ -82,6 +82,6 @@ query  {
   }
 `
 
-export const Head = ({ data }) => <title>Best Sellers - Blue Rock Liquor, Wine & Spirits</title>
+export const Head = ({ data }) => <title>Staff Picks - Blue Rock Liquor, Wine & Spirits</title>
 
-export default BestSeller
+export default StaffPicks

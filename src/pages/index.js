@@ -17,7 +17,9 @@ const IndexPage = ({ data }) => {
       <section class="hero">
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
-          <button class="menuContentButton">See More</button>
+          <Link to="/trending">
+            <button class="menuContentButton">See More</button>
+          </Link>
         </div>
 
       </section>
@@ -26,7 +28,9 @@ const IndexPage = ({ data }) => {
           <p class="menuContentText">
             Top Rated Wines
           </p>
-          <button class="menuContentButton">See More</button>
+          <Link to="toprated">
+            <button class="menuContentButton">See More</button>
+          </Link>
         </div>
         <div id="newArrivals">
           <p class="menuContentText">
@@ -42,13 +46,17 @@ const IndexPage = ({ data }) => {
           <p class="menuContentText">
             Tequilas
           </p>
-          <button class="menuContentButton">See More</button>
+          <Link to="/tequila">
+            <button class="menuContentButton">See More</button>
+          </Link>
         </div>
         <div id="whiskey">
           <p class="menuContentText">
             Whiskeys
           </p>
-          <button class="menuContentButton">See More</button>
+          <Link to="/whiskey">
+            <button class="menuContentButton">See More</button>
+          </Link>
         </div>
       </section>
       <section class="gridWrapper">
@@ -57,7 +65,9 @@ const IndexPage = ({ data }) => {
             <p class="menuContentText">
               Staff Picks
             </p>
-            <button class="menuContentButton">See More</button>
+            <Link to="/staffpicks">
+              <button class="menuContentButton">See More</button>
+            </Link>
           </div>
 
         </div>
@@ -65,7 +75,9 @@ const IndexPage = ({ data }) => {
           <p class="menuContentText">
             Specials
           </p>
-          <button class="menuContentButton">See More</button>
+          <Link to="/specials">
+            <button class="menuContentButton">See More</button>
+          </Link>
         </div>
       </section>
       {/* <div class="homePageWrapper">

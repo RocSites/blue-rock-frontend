@@ -297,6 +297,7 @@ header a {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .menuContentText {
