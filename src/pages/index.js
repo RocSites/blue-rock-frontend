@@ -3,18 +3,31 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PhoneIcon from '@mui/icons-material/Phone';
+import winePour from "../images/wine_pour_2.jpg"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
 
 
-  const imagesWine = data.allStrapiWine.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
-  const imagesLiquor = data.allStrapiLiquor.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
+  // const imagesWine = data.allStrapiWine.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
+  // const imagesLiquor = data.allStrapiLiquor.nodes.map(node => node.image.localFile.childImageSharp.gatsbyImageData);
+  const dataWineObj = Object.fromEntries(Object.entries(data.allStrapiWine).map(x => x));
+  const dataLiquorObj = Object.fromEntries(Object.entries(data.allStrapiLiquor).map(x => x));
 
+  let allTrendingArray = dataWineObj.nodes.concat(dataLiquorObj.nodes);
+
+  let rotatingTrending = allTrendingArray[Math.floor(Math.random() * allTrendingArray.length)];
+  console.log(rotatingTrending)
+  let rotatingTrendingImage = rotatingTrending ? rotatingTrending.image.localFile.childImageSharp.gatsbyImageData : winePour;
 
   return (
     <Layout pageTitle="Home Page">
       <section class="hero">
+        <Link to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
+          <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
+          <p class="heroTrendingText">{rotatingTrending.title}</p>
+        </Link>
+
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
           <Link to="/trending">
@@ -137,7 +150,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 query {
-  allStrapiWine {
+  allStrapiWine (filter: {trendingFeatured: {eq: true}}) {
     nodes {
       title
       slug
@@ -154,7 +167,7 @@ query {
       }
     }
   }
-  allStrapiLiquor {
+  allStrapiLiquor (filter: {trendingFeatured: {eq: true}}) {
     nodes {
       title
       slug
