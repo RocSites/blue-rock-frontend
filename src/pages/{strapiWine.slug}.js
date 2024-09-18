@@ -8,10 +8,13 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout pageTitle={data.strapiWine.title}>
-      <GatsbyImage class="postcover" image={data.strapiWine.image.localFile.childImageSharp.gatsbyImageData} alt={`Cover for ${data.strapiWine.title}`} />
-      <p class="postdate">{data.strapiWine.description}</p>
-      <p class="postcategory"><Link to={`/${data.strapiWine.category.slug}`}>Category: {data.strapiWine.category.name}</Link></p>
-      {/* <div class="postcontent" dangerouslySetInnerHTML={{ __html: data.strapiWine.content.data.childMarkdownRemark.html }} /> */}
+      <div class="slugPageWrapper">
+        <GatsbyImage class="postcover" image={data.strapiWine.image.localFile.childImageSharp.gatsbyImageData} alt={`Cover for ${data.strapiWine.title}`} />
+        <p class="postdate">{data.strapiWine.description}</p>
+        <p class="postcategory"><Link to={`/${data.strapiWine.category.slug}`}>Category: {data.strapiWine.category.name}</Link></p>
+        {/* <div class="postcontent" dangerouslySetInnerHTML={{ __html: data.strapiWine.content.data.childMarkdownRemark.html }} /> */}
+      </div>
+
     </Layout>
   )
 }

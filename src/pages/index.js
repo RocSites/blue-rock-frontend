@@ -17,17 +17,11 @@ const IndexPage = ({ data }) => {
   let allTrendingArray = dataWineObj.nodes.concat(dataLiquorObj.nodes);
 
   let rotatingTrending = allTrendingArray[Math.floor(Math.random() * allTrendingArray.length)];
-  console.log(rotatingTrending)
   let rotatingTrendingImage = rotatingTrending ? rotatingTrending.image.localFile.childImageSharp.gatsbyImageData : winePour;
 
   return (
     <Layout pageTitle="Home Page">
       <section class="hero">
-        <Link to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
-          <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
-          <p class="heroTrendingText">{rotatingTrending.title}</p>
-        </Link>
-
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
           <Link to="/trending">
@@ -93,6 +87,16 @@ const IndexPage = ({ data }) => {
           </Link>
         </div>
       </section>
+
+      <div class="featuredWrapper"> 
+        <h1 class="featuredHeader">Featured Product</h1>
+        <p style={{ textAlign: "center", color: "white" }}>Give this one a try!</p>
+        <Link class="trendingImageLink" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
+          <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
+          <p class="heroTrendingText">{rotatingTrending.title}</p>
+        </Link>
+
+      </div>
       {/* <div class="homePageWrapper">
         <ul class="postlist">
           {

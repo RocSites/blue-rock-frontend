@@ -19,8 +19,50 @@ const Layout = ({ pageTitle, children }) => {
                         id
                     }
           }
+          allStrapiWine (filter: {trendingFeatured: {eq: true}}) {
+            nodes {
+            title
+            slug
+            image {
+                localFile {
+                childImageSharp {
+                    gatsbyImageData
+                }
+                }
+            }
+            category {
+                name
+                slug
+            }
+            }
+        }
+  allStrapiLiquor (filter: {trendingFeatured: {eq: true}}) {
+    nodes {
+      title
+      slug
+      image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+     
+      category {
+        name
+        slug
+      }
+    }
+  }
         }
     `)
+
+    const dataWineObj = Object.fromEntries(Object.entries(data.allStrapiWine).map(x => x));
+    const dataLiquorObj = Object.fromEntries(Object.entries(data.allStrapiLiquor).map(x => x));
+
+    let allTrendingArray = dataWineObj.nodes.concat(dataLiquorObj.nodes);
+
+    let rotatingTrending = allTrendingArray[Math.floor(Math.random() * allTrendingArray.length)];
 
     const [openDrawer, setOpenDrawer] = useState(false);
     const [dropdown, setDropdown] = useState(false);
@@ -55,8 +97,10 @@ const Layout = ({ pageTitle, children }) => {
         <div class="pagewrapper">
             <div class="topHeaderRoot">
                 <div class="topHeaderWrapper">
-                    <p>NEW Bottle of Brand, available  this week! </p>
-                    <p>Upcoming Tasting - 9/16 @ 5:00 pm ET</p>
+                    <p>Featured Product - {`${rotatingTrending.title}`} </p>
+                    <Link class="trendingTopBannerButton" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
+                        See More
+                    </Link>
                 </div>
             </div>
             <header class={navbarScroll ? "navBarRootScroll" : "navBarRoot"}>

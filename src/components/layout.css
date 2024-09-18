@@ -46,7 +46,7 @@ a:hover {
 .navBarRoot {
     display: flex;
     position: fixed;
-    top: 58px;
+    top: 80px;
     background-color: rgb(22 48 161);
     color: white;
     width: 100%;
@@ -87,6 +87,7 @@ a:hover {
     margin: auto;
     background-color: black;
     color: white;
+    height: 80px;
 }
 
 .topHeaderWrapper {
@@ -135,13 +136,12 @@ header a {
 }
 
 .hero {
-    display: flex;
-    max-height: 40em;
+    max-height: 20em;
     text-align: center;
     padding: 2em 0;
     margin-top: 120px;
-    /* background-image: url(../images/wine_pour_2.jpg); */
-    /* background-size: cover; */
+    background-image: url(../images/wine_pour_2.jpg);
+    background-size: cover;
     background-color: black;
 }
 
@@ -150,8 +150,8 @@ header a {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    padding: 5em 0;
+    width: 160%;
+    padding: 5em;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -160,10 +160,39 @@ header a {
 
 .heroTrendingText {
     color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.slugPageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slugPageWrapper img {
+    max-height: 20em;
+    object-fit: contain !important;
+}
+
+.trendingImageLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trendingTopBannerButton {
+    background-color: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 16px;
+    margin-top: 7px;
 }
 
 .heroImage {
-    max-height: 15em;
+    max-height: 25em;
     margin: 2em;
 }
 
@@ -172,7 +201,7 @@ header a {
 }
 
 .layoutHeader {
-    margin-top: 120px;
+    margin-top: 140px;
     text-align: center;
 }
 
@@ -344,7 +373,7 @@ header a {
 }
 
 .pageTitle {
-    color: hsl(250, 92%, 60%);
+    color: black ;
     text-transform: capitalize;
 }
 
@@ -452,7 +481,10 @@ header a {
 }
 
 .postcategory {
-    color: hsl(250, 92%, 60%);
+    background-color:rgb(22 48 161);
+    color: white;
+    padding: 15px;
+    border-radius: 16px
 }
 
 .description {
@@ -533,6 +565,17 @@ footer p {
 .contactHeader {
     font-size: 2em;
     text-align: center;
+}
+
+.featuredWrapper {
+    background-color: black;
+}
+
+.featuredHeader {
+    padding-top: 40px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
 }
 
 .contactPhone {
@@ -618,7 +661,7 @@ footer p {
 
 @media (max-width: 640px) {
     .hero {
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: auto;
     }
 
