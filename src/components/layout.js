@@ -103,7 +103,7 @@ const Layout = ({ pageTitle, children }) => {
         setLiquorDropdown(false);
     }
 
-    
+
 
     const handleMouseEnterWine = () => {
         setDropdown(true)
@@ -152,7 +152,7 @@ const Layout = ({ pageTitle, children }) => {
                                     </ul>
                                     : null}
                             </div>
-                        
+
                             <div class="productButtonWrapper">
                                 <button
                                     aria-expanded={dropdownLiquor ? "true" : "false"}
@@ -175,6 +175,14 @@ const Layout = ({ pageTitle, children }) => {
                                     </ul>
                                     : null}
                             </div>
+                            <div class="navHeaderLinkWrapper">
+                                <Link class="navHeaderLink" to="/trending">Trending Now</Link>
+                                <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
+                                <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
+                                <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                <Link class="navHeaderLink" to="/special">Specials</Link>
+                            </div>
+
                         </div>
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
@@ -215,7 +223,7 @@ const Layout = ({ pageTitle, children }) => {
                 ) : (
                     <>
                         <div class="navNoScrollWrapper">
-                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
+                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits Logo" /></Link>
                             <div class="productButtonWrapper">
                                 <button
                                     aria-expanded={dropdown ? "true" : "false"}
@@ -261,6 +269,14 @@ const Layout = ({ pageTitle, children }) => {
                                     </ul>
                                     : null}
                             </div>
+                            <div class="navHeaderLinkWrapper">
+                                <Link class="navHeaderLink" to="/trending">Trending Now</Link>
+                                <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
+                                <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
+                                <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                <Link class="navHeaderLink" to="/specials">Specials</Link>
+                            </div>
+
 
 
                             <div class="smallVWHamburgerWrapper">
@@ -296,7 +312,7 @@ const Layout = ({ pageTitle, children }) => {
 
                         </div>
                         <div class="contactNoScroll">
-                            <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                            <AnchorLink class="contactNavLink" to="/#contact" title="Contact"></AnchorLink>
                             <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                         </div>
                     </>

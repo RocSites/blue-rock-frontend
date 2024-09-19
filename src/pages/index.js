@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
       <section class="gridWrapper">
         <div id="tequilas">
           <p class="menuContentText">
-            Tequilas
+            Tequila
           </p>
           <Link to="/tequila">
             <button class="menuContentButton">See More</button>
@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div id="whiskey">
           <p class="menuContentText">
-            Whiskeys
+            Whiskey
           </p>
           <Link to="/whiskey">
             <button class="menuContentButton">See More</button>
