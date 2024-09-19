@@ -6,6 +6,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import BlueRockLogo from "../images/blue_rock_logo.jpg"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import "./layout.css"
 
 
@@ -66,8 +67,13 @@ const Layout = ({ pageTitle, children }) => {
 
     const [openDrawer, setOpenDrawer] = useState(false);
     const [dropdown, setDropdown] = useState(false);
+    const [dropdownLiquor, setLiquorDropdown] = useState(false);
     const [open, setOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false);
+
+    //arrays to hold product dropdown items
+    const productWine = data.allStrapiCategory.nodes.slice(0, 3);
+    const productLiquor = data.allStrapiCategory.nodes.slice(3, 7);
 
     const handleClickMobile = () => {
         setOpen(!open)
@@ -76,7 +82,6 @@ const Layout = ({ pageTitle, children }) => {
     const toggleDrawer = () => {
         setOpenDrawer(drawerOpen => !drawerOpen)
     }
-
 
     //navbar scroll changeBackground function
     const changeBackground = () => {
@@ -93,31 +98,83 @@ const Layout = ({ pageTitle, children }) => {
         window.addEventListener("scroll", changeBackground)
     })
 
+    const handleMouseLeave = () => {
+        setDropdown(false);
+        setLiquorDropdown(false);
+    }
+
+    
+
+    const handleMouseEnterWine = () => {
+        setDropdown(true)
+        setLiquorDropdown(false)
+    }
+
+    const handleMouseEnterLiquor = () => {
+        setLiquorDropdown(true)
+        setDropdown(false)
+    }
+
     return (
         <div class="pagewrapper">
-            <div class="topHeaderRoot">
+            {/* <div class="topHeaderRoot">
                 <div class="topHeaderWrapper">
                     <p>Featured Product - {`${rotatingTrending.title}`} </p>
                     <Link class="trendingTopBannerButton" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
                         See More
                     </Link>
                 </div>
-            </div>
+            </div> */}
             <header class={navbarScroll ? "navBarRootScroll" : "navBarRoot"}>
                 {navbarScroll === true ? (
                     <>
                         <div class="navScrollLogoProductWrapper">
                             <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
-                            <ul class="navNoScrollProductList">
-                                {
-                                    data.allStrapiCategory.nodes.map(node => (
-                                        <li key={node.id}>
-                                            <Link to={`/${node.slug}`}>{node.name}</Link>
-                                        </li>
-                                    )
-                                    )
-                                }
-                            </ul>
+                            <div class="productButtonWrapper" >
+                                <button
+                                    aria-expanded={dropdown ? "true" : "false"}
+                                    onMouseEnter={handleMouseEnterWine}
+                                    style={{
+                                        backgroundColor: "inherit",
+                                        border: "transparent"
+                                    }}
+                                >
+                                    Wine
+                                    <KeyboardArrowDownIcon />
+                                </button>
+                                {dropdown ?
+                                    <ul onMouseLeave={handleMouseLeave} className={`dropdown dropdown-submenu ${dropdown ? "show" : ""}`}>
+                                        {productWine.map((node) => (
+                                            <li key={node.id} class="menu-items">
+                                                <Link to={`/${node.slug}`}>{node.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    : null}
+                            </div>
+                        
+                            <div class="productButtonWrapper">
+                                <button
+                                    aria-expanded={dropdownLiquor ? "true" : "false"}
+                                    onMouseEnter={handleMouseEnterLiquor}
+                                    style={{
+                                        backgroundColor: "inherit",
+                                        border: "transparent"
+                                    }}
+                                >
+                                    Liquor
+                                    <KeyboardArrowDownIcon />
+                                </button>
+                                {dropdownLiquor ?
+                                    <ul onMouseLeave={handleMouseLeave} className={`dropdownLiquor dropdownLiquor-submenu ${dropdownLiquor ? "show" : ""}`}>
+                                        {productLiquor.map((node) => (
+                                            <li key={node.id} class="menu-items">
+                                                <Link to={`/${node.slug}`}>{node.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    : null}
+                            </div>
                         </div>
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
@@ -159,16 +216,52 @@ const Layout = ({ pageTitle, children }) => {
                     <>
                         <div class="navNoScrollWrapper">
                             <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
-                            <ul class="navNoScrollProductList">
-                                {
-                                    data.allStrapiCategory.nodes.map(node => (
-                                        <li key={node.id}>
-                                            <Link to={`/${node.slug}`}>{node.name}</Link>
-                                        </li>
-                                    )
-                                    )
-                                }
-                            </ul>
+                            <div class="productButtonWrapper">
+                                <button
+                                    aria-expanded={dropdown ? "true" : "false"}
+                                    onMouseEnter={handleMouseEnterWine}
+                                    style={{
+                                        backgroundColor: "inherit",
+                                        border: "transparent"
+                                    }}
+                                >
+                                    Wine
+                                    <KeyboardArrowDownIcon />
+                                </button>
+                                {dropdown ?
+                                    <ul onMouseLeave={handleMouseLeave} className={`dropdown dropdown-submenu ${dropdown ? "show" : ""}`}>
+                                        {productWine.map((node) => (
+                                            <li key={node.id} class="menu-items">
+                                                <Link to={`/${node.slug}`}>{node.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    : null}
+                            </div>
+
+                            <div class="productButtonWrapper" >
+                                <button
+                                    aria-expanded={dropdownLiquor ? "true" : "false"}
+                                    onMouseEnter={handleMouseEnterLiquor}
+                                    style={{
+                                        backgroundColor: "inherit",
+                                        border: "transparent"
+                                    }}
+                                >
+                                    Liquor
+                                    <KeyboardArrowDownIcon />
+                                </button>
+                                {dropdownLiquor ?
+                                    <ul onMouseLeave={handleMouseLeave} className={`dropdownLiquor dropdownLiquor-submenu ${dropdownLiquor ? "show" : ""}`}>
+                                        {productLiquor.map((node) => (
+                                            <li key={node.id} class="menu-items">
+                                                <Link to={`/${node.slug}`}>{node.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    : null}
+                            </div>
+
 
                             <div class="smallVWHamburgerWrapper">
                                 <div class="contactScrollMobile">
