@@ -7,6 +7,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import BlueRockLogo from "../images/blue_rock_logo.jpg"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import List from '@mui/material/List';
+import Collapse from '@mui/material/Collapse';
 import "./layout.css"
 
 
@@ -69,6 +77,7 @@ const Layout = ({ pageTitle, children }) => {
     const [dropdown, setDropdown] = useState(false);
     const [dropdownLiquor, setLiquorDropdown] = useState(false);
     const [open, setOpen] = useState(false);
+    const [openLiquor, setOpenLiquor] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false);
 
     //arrays to hold product dropdown items
@@ -77,6 +86,10 @@ const Layout = ({ pageTitle, children }) => {
 
     const handleClickMobile = () => {
         setOpen(!open)
+    }
+
+    const handleClickMobileLiquor = () => {
+        setOpenLiquor(!openLiquor)
     }
 
     const toggleDrawer = () => {
@@ -201,16 +214,47 @@ const Layout = ({ pageTitle, children }) => {
                                     paper: "navDrawerRoot"
                                 }}
                             >
-                                <ul class="drawerProductList">
-                                    {
-                                        data.allStrapiCategory.nodes.map(node => (
-                                            <li key={node.id}>
-                                                <Link to={`/${node.slug}`}>{node.name}</Link>
-                                            </li>
-                                        )
-                                        )
-                                    }
-                                </ul>
+                                <div class="productButtonWrapperMobile">
+                                    <ListItemButton style={{ paddingLeft: "8px", paddingBottom: "0px", justifyContent: "flex-start" }} onClick={handleClickMobile}>
+                                        <Typography class="productMobileListText">Wine</Typography>
+                                        {open ? <ExpandLess /> : <ExpandMore />}
+                                    </ListItemButton>
+                                    <Collapse in={open} timeout="auto" unmountOnExit>
+                                        <List component="div" disablePadding>
+                                            <List>
+                                                {productWine.map((node) => (
+                                                    <ListItemText key={node.id} className="menu-items">
+                                                        <Link class="drawerProductLink" to={`/${node.slug}`}>{node.name}</Link>
+                                                    </ListItemText>
+                                                ))}
+                                            </List>
+                                        </List>
+                                    </Collapse>
+                                </div>
+                                <div class="productButtonWrapperMobile">
+                                    <ListItemButton style={{ paddingLeft: "8px", paddingBottom: "0px", justifyContent: "flex-start" }} onClick={handleClickMobileLiquor}>
+                                        <Typography class="productMobileListText">Liquor</Typography>
+                                        {openLiquor ? <ExpandLess /> : <ExpandMore />}
+                                    </ListItemButton>
+                                    <Collapse in={openLiquor} timeout="auto" unmountOnExit>
+                                        <List component="div" disablePadding>
+                                            <List>
+                                                {productLiquor.map((node) => (
+                                                    <ListItemText key={node.id} className="menu-items">
+                                                        <Link class="drawerProductLink" to={`/${node.slug}`}>{node.name}</Link>
+                                                    </ListItemText>
+                                                ))}
+                                            </List>
+                                        </List>
+                                    </Collapse>
+                                </div>
+                                <div class="navHeaderLinkWrapperMobile">
+                                        <Link class="navHeaderLink" to="/trending">Trending Now</Link>
+                                        <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
+                                        <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
+                                        <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                        <Link class="navHeaderLink" to="/specials">Specials</Link>
+                                    </div>
 
                             </Drawer>
                         </div>
@@ -296,16 +340,47 @@ const Layout = ({ pageTitle, children }) => {
                                         paper: "navDrawerRoot"
                                     }}
                                 >
-                                    <ul class="drawerProductList">
-                                        {
-                                            data.allStrapiCategory.nodes.map(node => (
-                                                <li key={node.id}>
-                                                    <Link to={`/${node.slug}`}>{node.name}</Link>
-                                                </li>
-                                            )
-                                            )
-                                        }
-                                    </ul>
+                                    <div class="productButtonWrapperMobile">
+                                        <ListItemButton style={{ paddingLeft: "8px", paddingBottom: "0px", justifyContent: "flex-start" }} onClick={handleClickMobile}>
+                                            <Typography class="productMobileListText">Wine</Typography>
+                                            {open ? <ExpandLess /> : <ExpandMore />}
+                                        </ListItemButton>
+                                        <Collapse in={open} timeout="auto" unmountOnExit>
+                                            <List component="div" disablePadding>
+                                                <List>
+                                                    {productWine.map((node) => (
+                                                        <ListItemText key={node.id} className="menu-items">
+                                                            <Link class="drawerProductLink" to={`/${node.slug}`}>{node.name}</Link>
+                                                        </ListItemText>
+                                                    ))}
+                                                </List>
+                                            </List>
+                                        </Collapse>
+                                    </div>
+                                    <div class="productButtonWrapperMobile">
+                                        <ListItemButton style={{ paddingLeft: "8px", paddingBottom: "0px", justifyContent: "flex-start" }} onClick={handleClickMobileLiquor}>
+                                            <Typography class="productMobileListText">Liquor</Typography>
+                                            {openLiquor ? <ExpandLess /> : <ExpandMore />}
+                                        </ListItemButton>
+                                        <Collapse in={openLiquor} timeout="auto" unmountOnExit>
+                                            <List component="div" disablePadding>
+                                                <List>
+                                                    {productLiquor.map((node) => (
+                                                        <ListItemText key={node.id} className="menu-items">
+                                                            <Link class="drawerProductLink" to={`/${node.slug}`}>{node.name}</Link>
+                                                        </ListItemText>
+                                                    ))}
+                                                </List>
+                                            </List>
+                                        </Collapse>
+                                    </div>
+                                    <div class="navHeaderLinkWrapperMobile">
+                                        <Link class="navHeaderLink" to="/trending">Trending Now</Link>
+                                        <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
+                                        <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
+                                        <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                        <Link class="navHeaderLink" to="/specials">Specials</Link>
+                                    </div>
 
                                 </Drawer>
                             </div>

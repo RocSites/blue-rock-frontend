@@ -146,8 +146,7 @@ header a {
 .productButtonWrapperMobile {
     display: flex;
     flex-direction: column;
-    margin: 0 8px;
-    margin-top: 30px;
+    margin: 5px 8px;
 }
 
 .productButtonWrapperMobile button {
@@ -176,7 +175,7 @@ header a {
 
 .navHeaderLink {
     font-size: 0.9em;
-    margin: 8.5px 10px 0px s;
+    margin: 8.5px 10px 0px 5px;
     text-decoration: none !important;
 }
 
@@ -191,6 +190,16 @@ header a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navHeaderLinkWrapperMobile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.productMobileListText {
+    font-size: 0.9em;
 }
 
 .dropdown {
@@ -310,6 +319,11 @@ header a {
 .menu-items a:hover,
 .menu-items button:hover {
     background-color: rgb(22 48 161 / 42%);
+}
+
+.drawerProductLink {
+    padding-left: 32px !important;
+    text-transform: capitalize !important;
 }
 
 
@@ -578,7 +592,7 @@ header a {
 }
 
 .navDrawerRoot {
-    /* margin-top: 77px; */
+    width: 250px;
 }
 
 .drawerProductList {
@@ -788,6 +802,13 @@ footer p {
 }
 
 @media (max-width: 960px) {
+    .productButtonWrapper {
+        display: none;
+    }
+
+    .navHeaderLinkWrapper {
+        display: none;
+    }
 
     .navBarRoot {
         position: static;
@@ -845,6 +866,16 @@ footer p {
 }
 
 @media (max-width: 640px) {
+    .navHeaderLink {
+        margin: 8px 5px;
+    }
+    
+    .navHeaderLinkWrapperMobile [aria-current="page"] {
+        font-size: 0.9em;
+        margin: 8.5px 10px 0px 5px;
+        text-decoration: none !important;
+    }
+
     .hero {
         flex-direction: column;
         height: auto;
