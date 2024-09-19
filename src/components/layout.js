@@ -180,7 +180,7 @@ const Layout = ({ pageTitle, children }) => {
                                 <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
                                 <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
                                 <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
-                                <Link class="navHeaderLink" to="/special">Specials</Link>
+                                <Link class="navHeaderLink" to="/specials">Specials</Link>
                             </div>
 
                         </div>

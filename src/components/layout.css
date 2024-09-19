@@ -159,7 +159,7 @@ header a {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
-    margin-top: 1px;
+    margin-top: 2px;
 }
 
 .productButtonWrapper button {
@@ -171,12 +171,20 @@ header a {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
-    margin-top: 1px;
+    margin-top: 2px;
 }
 
 .navHeaderLink {
     font-size: 0.9em;
-    margin: 5px 10px 0px 5px;
+    margin: 8.5px 10px 0px s;
+    text-decoration: none !important;
+}
+
+
+.navHeaderLinkWrapper [aria-current="page"] {
+    font-size: 0.9em;
+    margin: 8.5px 10px 0px 5px;
+    text-decoration: none !important;
 }
 
 .navHeaderLinkWrapper {
