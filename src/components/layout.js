@@ -8,7 +8,6 @@ import Drawer from '@mui/material/Drawer';
 import BlueRockLogo from "../images/blue_rock_logo.jpg"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import ExpandLess from '@mui/icons-material/ExpandLess';

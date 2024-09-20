@@ -1,9 +1,13 @@
 // src/pages/index.js
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PhoneIcon from '@mui/icons-material/Phone';
+import CloseIcon from '@mui/icons-material/Close';
 import winePour from "../images/wine_pour_2.jpg"
+import Modal from '@mui/material/Modal'
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
@@ -19,8 +23,57 @@ const IndexPage = ({ data }) => {
   let rotatingTrending = allTrendingArray[Math.floor(Math.random() * allTrendingArray.length)];
   let rotatingTrendingImage = rotatingTrending ? rotatingTrending.image.localFile.childImageSharp.gatsbyImageData : winePour;
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleClose = () => setModalOpen(false);
+
+
+  useEffect(() => {
+    // Check if the popup has been shown befosre
+    const hasShownPopup = localStorage.getItem('popupShown');
+
+    if (!hasShownPopup) {
+      setModalOpen(true);
+      localStorage.setItem('popupShown', 'true');
+      console.log("useEffect fired")
+    }
+  }, []);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: "100%",
+    maxWidth: 400,
+    bgcolor: 'background.paper',
+    borderRadius: '15px',
+    border: '2px solid #03178e',
+    boxShadow: 24,
+    p: 4,
+};
+
   return (
     <Layout pageTitle="Home Page">
+      <div>
+        <Modal
+          open={modalOpen}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            {/* <Typography style={{textAlign: "center"}} id="modal-modal-title" variant="h6" component="h2">
+                                July 4th Hours
+                            </Typography> */}
+            <br />
+            <Typography style={{ textAlign: "center" }} id="modal-modal-description" sx={{ mt: 2 }}>
+              You must be of legal drinking age to enter this site.
+            </Typography>
+            <br />
+            <button class="legalAgeButton" onClick={handleClose}>I am over the age of 21</button>
+          </Box>
+        </Modal>
+      </div>
       <section class="hero">
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
@@ -88,7 +141,7 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <div class="featuredWrapper"> 
+      <div class="featuredWrapper">
         <h1 class="featuredHeader">Featured Product</h1>
         <p style={{ textAlign: "center", color: "white" }}>Give this one a try!</p>
         <Link class="trendingImageLink" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
