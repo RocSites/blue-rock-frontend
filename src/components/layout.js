@@ -79,9 +79,24 @@ const Layout = ({ pageTitle, children }) => {
     const [openLiquor, setOpenLiquor] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false);
 
+    const wineCategories = [
+        "red wine",
+        "white wine",
+        "sparkling"s
+    ];
+
+    const liquorCategories = [
+        "vodka",
+        "rum",
+        "tequila",
+        "whiskey"
+    ]
+
+    console.log(data.allStrapiCategory.nodes)
+
     //arrays to hold product dropdown items
-    const productWine = data.allStrapiCategory.nodes.slice(0, 3);
-    const productLiquor = data.allStrapiCategory.nodes.slice(3, 7);
+    const productWine = data.allStrapiCategory.nodes.filter(product => wineCategories.includes(product.name));
+    const productLiquor = data.allStrapiCategory.nodes.filter(product => liquorCategories.includes(product.name));
 
     const handleClickMobile = () => {
         setOpen(!open)
