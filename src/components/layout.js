@@ -82,7 +82,7 @@ const Layout = ({ pageTitle, children }) => {
     const wineCategories = [
         "red wine",
         "white wine",
-        "sparkling"s
+        "sparkling"
     ];
 
     const liquorCategories = [
