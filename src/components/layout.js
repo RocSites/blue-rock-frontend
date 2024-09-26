@@ -92,7 +92,6 @@ const Layout = ({ pageTitle, children }) => {
         "whiskey"
     ]
 
-    console.log(data.allStrapiCategory.nodes)
 
     //arrays to hold product dropdown items
     const productWine = data.allStrapiCategory.nodes.filter(product => wineCategories.includes(product.name));

@@ -34,7 +34,6 @@ const IndexPage = ({ data }) => {
     if (!hasShownPopup) {
       setModalOpen(true);
       localStorage.setItem('popupShown', 'true');
-      console.log("useEffect fired")
     }
   }, []);
 

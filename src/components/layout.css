@@ -911,6 +911,7 @@ footer p {
 @media (max-width: 640px) {
     #blueRockNavLogo {
         margin-right: 10px;
+        width: 80px;
     }
     
     .navHeaderLink {
