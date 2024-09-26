@@ -143,7 +143,6 @@ const IndexPage = ({ data }) => {
 
       <div class="featuredWrapper">
         <h1 class="featuredHeader">Featured Product</h1>
-        <p style={{ textAlign: "center", color: "white" }}>Give this one a try!</p>
         <Link class="trendingImageLink" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
           <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
           <p class="heroTrendingText">{rotatingTrending.title}</p>

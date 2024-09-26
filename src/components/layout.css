@@ -2,6 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+
 html,
 body,
 div,
@@ -46,8 +49,8 @@ a:hover {
 .navBarRoot {
     display: flex;
     position: fixed;
-    background-color: rgb(22 48 161);
-    color: white;
+    background-color: white;
+    color: rgb(22 48 161);
     width: 100%;
     justify-content: space-between;
     z-index: 1;
@@ -132,7 +135,7 @@ header ul {
 }
 
 header a {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 0.9em;
 }
 
@@ -140,7 +143,6 @@ header a {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 32px;
 }
 
 .productButtonWrapperMobile {
@@ -158,7 +160,9 @@ header a {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .productButtonWrapper button {
@@ -170,13 +174,18 @@ header a {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+
 }
 
 .navHeaderLink {
     font-size: 0.9em;
     margin: 8.5px 10px 0px 5px;
     text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 
@@ -200,14 +209,16 @@ header a {
 
 .productMobileListText {
     font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .dropdown {
     display: none;
     position: absolute;
     right: auto;
-    left: 125px;
-    top: 79px;
+    left: 205px;
+    top: 118px;
     box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
         0 4px 6px -2px rgba(71, 63, 79, 0.16);
     font-size: 0.875rem;
@@ -223,8 +234,8 @@ header a {
 .dropdownLiquor {
     position: absolute;
     right: auto;
-    left: 200px;
-    top: 79px;
+    left: 286px;
+    top: 120px;
     box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
         0 4px 6px -2px rgba(71, 63, 79, 0.16);
     font-size: 0.875rem;
@@ -314,6 +325,7 @@ header a {
     padding-left: 10px;
     padding-right: 10px;
     height: 35px;
+    text-transform: uppercase;
 }
 
 .menu-items a:hover,
@@ -323,7 +335,6 @@ header a {
 
 .drawerProductLink {
     padding-left: 32px !important;
-    text-transform: capitalize !important;
 }
 
 
@@ -351,7 +362,7 @@ header a {
 }
 
 .heroTrendingText {
-    color: white;
+    color: black;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -373,6 +384,9 @@ header a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 25%;
+    margin: auto;
+    background-color: white;
 }
 
 .trendingTopBannerButton {
@@ -393,7 +407,7 @@ header a {
 }
 
 .layoutHeader {
-    margin-top: 140px;
+    margin-top: 220px;
     text-align: center;
 }
 
@@ -430,7 +444,7 @@ header a {
     justify-content: center;
     background-image: url("../images/egor-myznik-wine-bottles.jpg");
     background-size: cover;
-    color: #3aa8e4;
+    color: white;
     height: 10em;
     text-align: center;
     border: none;
@@ -447,9 +461,9 @@ header a {
     background-image: url("../images/patron.jpg");
     /* background-image: url("../images/casaamigos_tequial.jpg"); */
     /* background-image: url("../images/jose_cuevo_half_page.jpg"); */
-    background-position-y: 50%;
+    background-position-y: 60%;
     background-size: cover;
-    color: black;
+    color: #fe0100;
     height: 10em;
     text-align: center;
     border: none;
@@ -464,9 +478,9 @@ header a {
     align-items: center;
     justify-content: center;
     /* background-image: url("../images/xxl_blackberry.jpg"); */
-    background-image: url("../images/staff_picks.jpg");
-    background-position-y: 60%;
-    background-size: cover;
+    background-image: url("../images/allen-gong-staff-picks.jpg");
+    background-position-y: 80%;
+    background-size: 150%;
     color: white;
     height: 10em;
     text-align: center;
@@ -481,8 +495,9 @@ header a {
     width: 50%;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/wine-pour.jpg");
+    background-image: url("../images/wine_pour_black.jpg");
     background-size: cover;
+    background-position-y: 50%;
     color: white;
     height: 10em;
     text-align: center;
@@ -499,6 +514,7 @@ header a {
     justify-content: center;
     background-image: url("../images/johny_red.jpg");
     background-size: cover;
+    background-position-x: 70px;
     color: white;
     height: 10em;
     text-align: center;
@@ -517,7 +533,7 @@ header a {
     background-image: url("../images/jack_honey_2.jpg");
     background-position-y: 58%;
     background-size: cover;
-    color: #3aa8e4;
+    color: white;
     height: 10em;
     text-align: center;
     border: none;
@@ -560,7 +576,7 @@ header a {
 }
 
 #blueRockNavLogo {
-    width: 80px;
+    width: 160px;
     border-radius: 1em;
     margin-right: 30px;
 }
@@ -626,6 +642,13 @@ header a {
     justify-content: space-evenly;
     align-items: center;
     padding: 1.35em 0.5em 0.5em 0;
+    font-weight: 600;
+}
+
+.contactNoScroll a,
+.contactScroll a,
+.contactScrollMobile a  {
+    margin-right: 10px;
 }
 
 .contactNavLink {
@@ -710,8 +733,9 @@ header a {
 footer {
     margin-top: 3em;
     padding: 0.5em;
-    background-color: hsl(250, 92%, 10%);
-    color: hsl(250, 92%, 90%);
+    padding-bottom: 25px;
+    background-color: rgb(22 48 161);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -739,11 +763,11 @@ footer {
 }
 
 footer h2 {
-    font-size: clamp(0.5em, 1vw, 1em);
+    font-size: 1em;
 }
 
 footer p {
-    font-size: clamp(0.4em, 0.8vw, 0.8em);
+    font-size: 0.75em;
     font-weight: 400;
 }
 
@@ -757,6 +781,8 @@ footer p {
     justify-content: center;
     align-items: center;
     font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .callUsButtonScroll {
@@ -770,6 +796,8 @@ footer p {
     justify-content: center;
     align-items: center;
     font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .contactHeader {
@@ -779,6 +807,7 @@ footer p {
 
 .featuredWrapper {
     background-color: black;
+    padding-bottom: 40px;
 }
 
 .featuredHeader {
@@ -786,7 +815,9 @@ footer p {
     font-size: 2em;
     text-align: center;
     color: white;
-}
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
 
 .contactPhone {
     color: rgb(22 48 161);
@@ -908,6 +939,10 @@ footer p {
     #staffPicks,
     #specials {
         width: 100%;
+    }
+
+    #whiskey {
+        background-position-x: -100px;
     }
 
     .postlist {

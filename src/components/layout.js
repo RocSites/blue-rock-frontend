@@ -82,7 +82,7 @@ const Layout = ({ pageTitle, children }) => {
     const wineCategories = [
         "red wine",
         "white wine",
-        "sparkling"
+        "sparkling wine"
     ];
 
     const liquorCategories = [
@@ -213,7 +213,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
-                                <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                                <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
                                 <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                             </div>
                             <MenuIcon
@@ -273,7 +273,7 @@ const Layout = ({ pageTitle, children }) => {
                             </Drawer>
                         </div>
                         <div class="contactScroll">
-                            <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                            <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
                             <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                         </div>
                     </>
@@ -339,7 +339,7 @@ const Layout = ({ pageTitle, children }) => {
 
                             <div class="smallVWHamburgerWrapper">
                                 <div class="contactScrollMobile">
-                                    <AnchorLink to="/#contact" title="Contact"></AnchorLink>
+                                    <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
                                     <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                                 </div>
                                 <MenuIcon
@@ -401,7 +401,7 @@ const Layout = ({ pageTitle, children }) => {
 
                         </div>
                         <div class="contactNoScroll">
-                            <AnchorLink class="contactNavLink" to="/#contact" title="Contact"></AnchorLink>
+                            <AnchorLink style={{textTransform: "uppercase", fontWeight: "600 !important"}} class="contactNavLink" to="/#contact" title="Contact"></AnchorLink>
                             <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                         </div>
                     </>
