@@ -212,7 +212,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                         <div class="smallVWHamburgerWrapper">
                             <div class="contactScrollMobile">
-                                <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
+                                {/* <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact!"></AnchorLink> */}
                                 <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                             </div>
                             <MenuIcon
@@ -262,17 +262,21 @@ const Layout = ({ pageTitle, children }) => {
                                     </Collapse>
                                 </div>
                                 <div class="navHeaderLinkWrapperMobile">
-                                        <Link class="navHeaderLink" to="/trending">Trending Now</Link>
-                                        <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
-                                        <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
-                                        <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
-                                        <Link class="navHeaderLink" to="/specials">Specials</Link>
-                                    </div>
+                                    <Link class="navHeaderLink" to="/trending">Trending Now</Link>
+                                    <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
+                                    <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
+                                    <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                    <Link class="navHeaderLink" to="/specials">Specials</Link>
+                                    <AnchorLink class="navHeaderLink" to="/#contact" title="CONTACT"></AnchorLink>
+
+                                </div>
+
+
 
                             </Drawer>
                         </div>
                         <div class="contactScroll">
-                            <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
+                            <AnchorLink style={{ textTransform: "uppercase", fontWeight: "600" }} to="/#contact" title="Contact"></AnchorLink>
                             <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButtonScroll">Call Us</button></a>
                         </div>
                     </>
@@ -338,7 +342,7 @@ const Layout = ({ pageTitle, children }) => {
 
                             <div class="smallVWHamburgerWrapper">
                                 <div class="contactScrollMobile">
-                                    <AnchorLink style={{textTransform: "uppercase", fontWeight: "600"}} to="/#contact" title="Contact"></AnchorLink>
+                                    {/* <AnchorLink style={{ textTransform: "uppercase", fontWeight: "600" }} to="/#contact" title="Contact"></AnchorLink> */}
                                     <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                                 </div>
                                 <MenuIcon
@@ -393,6 +397,8 @@ const Layout = ({ pageTitle, children }) => {
                                         <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
                                         <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
                                         <Link class="navHeaderLink" to="/specials">Specials</Link>
+                                        <AnchorLink class="navHeaderLink" to="/#contact" title="CONTACT"></AnchorLink>
+
                                     </div>
 
                                 </Drawer>
@@ -400,7 +406,7 @@ const Layout = ({ pageTitle, children }) => {
 
                         </div>
                         <div class="contactNoScroll">
-                            <AnchorLink style={{textTransform: "uppercase", fontWeight: "600 !important"}} class="contactNavLink" to="/#contact" title="Contact"></AnchorLink>
+                            <AnchorLink style={{ textTransform: "uppercase", fontWeight: "600 !important" }} class="contactNavLink" to="/#contact" title="Contact"></AnchorLink>
                             <a style={{ textDecoration: "none" }} href="tel:5854812707"><button class="callUsButton">Call Us</button></a>
                         </div>
                     </>
