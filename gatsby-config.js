@@ -18,7 +18,15 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp"
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `blue-rock-liquor-and-wine`,
+        short_name: `blue-rock`,
+        icon: `src/images/logo/favicon.jpg`, // This path is relative to the root of the site.
+      },
+    },
 
   ],
 };
