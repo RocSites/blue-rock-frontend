@@ -445,6 +445,7 @@ header a {
     width: 50%;
     align-items: center;
     justify-content: center;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
     background-image: url("../images/top_rated_chateau.jpeg");
     background-size: cover;
     background-position-x: -360px;
