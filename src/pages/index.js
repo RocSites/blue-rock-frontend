@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
       <section class="hero">
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
-          <p>Mango, Pineapple, & Peach</p>
+          <p style={{marginBottom: "10px"}}>Mango, Pineapple, & Peach</p>
           <Link to="/trending">
             <button class="menuContentButton">See More</button>
           </Link>

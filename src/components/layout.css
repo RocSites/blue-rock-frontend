@@ -360,6 +360,8 @@ header a {
     font-weight: 400;
     font-style: normal;
     color: #3aa8e4;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 .heroTrendingText {
@@ -416,6 +418,7 @@ header a {
     font-size: 3em;
 }
 
+
 .hero h2 {
     text-wrap: balance;
 }
@@ -459,6 +462,7 @@ header a {
     width: 50%;
     align-items: center;
     justify-content: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-image: url("../images/patron.jpg");
     /* background-image: url("../images/casaamigos_tequial.jpg"); */
     /* background-image: url("../images/jose_cuevo_half_page.jpg"); */
