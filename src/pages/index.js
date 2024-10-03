@@ -76,12 +76,21 @@ const IndexPage = ({ data }) => {
       <section class="hero">
         <div class="heroText">
           <h1 class="heroTextH1">Trending Now</h1>
+          <p>Mango, Pineapple, & Peach</p>
           <Link to="/trending">
             <button class="menuContentButton">See More</button>
           </Link>
         </div>
 
       </section>
+      <div class="featuredWrapper">
+        <h1 class="featuredHeader">Featured Product</h1>
+        <Link class="trendingImageLink" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
+          <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
+          <p class="heroTrendingText">{rotatingTrending.title}</p>
+        </Link>
+
+      </div>
       <section class="gridWrapper">
         <div id="topRated">
           <p class="menuContentText">
@@ -119,7 +128,7 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section class="gridWrapper">
-        <div id="staffPicks">
+        {/* <div id="staffPicks">
           <div>
             <p class="menuContentText">
               Staff Picks
@@ -129,7 +138,7 @@ const IndexPage = ({ data }) => {
             </Link>
           </div>
 
-        </div>
+        </div> */}
         <div id="specials">
           <p class="menuContentText">
             Specials
@@ -140,14 +149,7 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <div class="featuredWrapper">
-        <h1 class="featuredHeader">Featured Product</h1>
-        <Link class="trendingImageLink" to={rotatingTrending ? `/${rotatingTrending.slug}` : "/trending"}>
-          <GatsbyImage class="heroImage" image={rotatingTrendingImage} alt={`Cover for ${rotatingTrending.title}`} />
-          <p class="heroTrendingText">{rotatingTrending.title}</p>
-        </Link>
-
-      </div>
+   
       {/* <div class="homePageWrapper">
         <ul class="postlist">
           {

@@ -343,8 +343,9 @@ header a {
     text-align: center;
     padding: 2em 0;
     margin-top: 120px;
-    background-image: url(../images/wine_pour_2.jpg);
+    background-image: url(../images/trending_xxl.jpg);
     background-size: cover;
+    background-position-y: center;
     background-color: black;
 }
 
@@ -353,12 +354,12 @@ header a {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    width: 160%;
+    width: 170%;
     padding: 5em;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: #3aa8e4;
 }
 
 .heroTrendingText {
@@ -413,7 +414,6 @@ header a {
 
 .heroTextH1 {
     font-size: 3em;
-    margin-bottom: 10px;
 }
 
 .hero h2 {
@@ -442,9 +442,10 @@ header a {
     width: 50%;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/egor-myznik-wine-bottles.jpg");
+    background-image: url("../images/top_rated_chateau.jpeg");
     background-size: cover;
-    color: white;
+    background-position-x: -360px;
+    color:rgb(22 48 161);
     height: 10em;
     text-align: center;
     border: none;
@@ -575,10 +576,15 @@ header a {
     font-size: 3rem;
 }
 
-#blueRockNavLogo {
+.blueRockNavLogo {
     width: 160px;
     border-radius: 1em;
     margin-right: 30px;
+}
+
+.blueRockNavLogoFooter {
+    width: 80px;
+    border-radius: 1em;
 }
 
 .pageTitle {
@@ -740,8 +746,9 @@ footer {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .postcover,
@@ -848,6 +855,13 @@ footer p {
     color: white;
 }
 
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 960px) {
     .productButtonWrapper {
         display: none;
@@ -914,8 +928,14 @@ footer p {
 
 @media (max-width: 640px) {
 
+    .trendingImageLink {
+        width: 65%;
+    }
+    .heroText {
+        padding: 3em;
+    }
     
-    #blueRockNavLogo {
+    .blueRockNavLogo {
         margin-right: 10px;
         width: 80px;
     }

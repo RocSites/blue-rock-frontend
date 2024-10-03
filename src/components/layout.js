@@ -14,6 +14,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import List from '@mui/material/List';
 import Collapse from '@mui/material/Collapse';
+import FacebookIcon from "../images/icon_fb.svg"
 import "./layout.css"
 
 
@@ -155,7 +156,7 @@ const Layout = ({ pageTitle, children }) => {
                 {navbarScroll === true ? (
                     <>
                         <div class="navScrollLogoProductWrapper">
-                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
+                            <Link to="/"><img class="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" /></Link>
                             <div class="productButtonWrapper" >
                                 <button
                                     aria-expanded={dropdown ? "true" : "false"}
@@ -205,7 +206,7 @@ const Layout = ({ pageTitle, children }) => {
                                 <Link class="navHeaderLink" to="/trending">Trending Now</Link>
                                 <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
                                 <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
-                                <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                {/* <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link> */}
                                 <Link class="navHeaderLink" to="/specials">Specials</Link>
                             </div>
 
@@ -265,7 +266,7 @@ const Layout = ({ pageTitle, children }) => {
                                     <Link class="navHeaderLink" to="/trending">Trending Now</Link>
                                     <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
                                     <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
-                                    <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                    {/* <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link> */}
                                     <Link class="navHeaderLink" to="/specials">Specials</Link>
                                     <AnchorLink class="navHeaderLink" to="/#contact" title="CONTACT"></AnchorLink>
 
@@ -284,7 +285,7 @@ const Layout = ({ pageTitle, children }) => {
                 ) : (
                     <>
                         <div class="navNoScrollWrapper">
-                            <Link to="/"><img id="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits Logo" /></Link>
+                            <Link to="/"><img class="blueRockNavLogo" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits Logo" /></Link>
                             <div class="productButtonWrapper">
                                 <button
                                     aria-expanded={dropdown ? "true" : "false"}
@@ -334,7 +335,7 @@ const Layout = ({ pageTitle, children }) => {
                                 <Link class="navHeaderLink" to="/trending">Trending Now</Link>
                                 <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
                                 <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
-                                <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                {/* <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link> */}
                                 <Link class="navHeaderLink" to="/specials">Specials</Link>
                             </div>
 
@@ -395,7 +396,7 @@ const Layout = ({ pageTitle, children }) => {
                                         <Link class="navHeaderLink" to="/trending">Trending Now</Link>
                                         <Link class="navHeaderLink" to="/toprated">Top Rated Wines</Link>
                                         <Link class="navHeaderLink" to="/bestseller">Best Sellers</Link>
-                                        <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link>
+                                        {/* <Link class="navHeaderLink" to="/staffpicks">Staff Picks</Link> */}
                                         <Link class="navHeaderLink" to="/specials">Specials</Link>
                                         <AnchorLink class="navHeaderLink" to="/#contact" title="CONTACT"></AnchorLink>
 
@@ -425,9 +426,13 @@ const Layout = ({ pageTitle, children }) => {
                 </section>
             </main>
             <footer>
-                <div>
+                <div class="footerWrapper">
+                    <img class="blueRockNavLogoFooter" src={BlueRockLogo} alt="Blue Rock Liquor, Wine & Spirits" />
                     <h2>Blue Rock Liquor, Wine & Spirits</h2>
                     <a href="tel:5854812707">(585) 481-2707</a>
+                    <a href="https://www.facebook.com/bluerockrochester/" target="_blank">
+                        <img src={FacebookIcon} />
+                    </a>
                     <p>© {new Date().getFullYear()}</p>
                 </div>
             </footer>
