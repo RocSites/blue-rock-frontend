@@ -651,6 +651,10 @@ header a {
     font-weight: 600;
 }
 
+.contactScrollMobile {
+    justify-content: center;
+}
+
 .contactNoScroll a,
 .contactScroll a,
 .contactScrollMobile a  {
