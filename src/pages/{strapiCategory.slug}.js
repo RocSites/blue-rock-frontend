@@ -5,9 +5,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 
 const Category = ({ data }) => {
-
-  console.log(data)
-
   return (
     <Layout pageTitle={data.strapiCategory.name}>
       <ul class="postlist">
