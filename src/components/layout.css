@@ -738,8 +738,8 @@ header a {
 }
 
 .description {
-    padding-top: 1em;
-    font-size: clamp(0.7em, 1.25vw, 1em);
+    padding: 1em;
+    font-size: clamp(0.7em, 1.25vw, 0.8em);
 }
 
 .postcover {
