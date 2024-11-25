@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
     border: '2px solid #03178e',
     boxShadow: 24,
     p: 4,
-};
+  };
 
   return (
     <Layout pageTitle="Home Page">
@@ -74,14 +74,55 @@ const IndexPage = ({ data }) => {
         </Modal>
       </div>
       <section class="hero">
+
         <div class="heroText">
-          <h1 class="heroTextH1">Trending Now</h1>
+          <h1 class="heroTextH1">Thanksgiving Deals</h1>
+          <p style={{ marginBottom: "10px" }}>Limited time only!</p>
+          {/* <h1 class="heroTextH1">Trending Now</h1>
           <p style={{marginBottom: "10px"}}>Mango, Pineapple, & Peach</p>
           <Link to="/trending">
             <button class="menuContentButton">See More</button>
-          </Link>
+          </Link> */}
         </div>
-
+        <div>
+          <ul class="holidayList">
+            <li>
+              <Link class="winelink" to={`/`}><h3>Baileys 750ml</h3></Link>
+              <div class="image-wrap">
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/IMG_7208_60ef73be6c/IMG_7208_60ef73be6c.jpg" altText="Cover for title" />
+              </div>
+              <p class="descriptionHoliday"><b>$33.99</b></p>
+            </li>
+            <li>
+              <Link class="winelink" to={`/`}><h3>Grey Goose 1 liter</h3></Link>
+              <div class="image-wrap">
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/grey_goose_460c8fe385/grey_goose_460c8fe385.jpg" altText="Cover for title" />
+              </div>
+              <p class="descriptionHoliday"><b>$32.99</b></p>
+            </li>
+            <li>
+              <Link class="winelink" to={`/`}><h3>Basil Hayden 750ml</h3></Link>
+              <div class="image-wrap">
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/basil_hayden_d41855db22/basil_hayden_d41855db22.jpg" altText="Cover for title" />
+              </div>
+              <p class="descriptionHoliday"><b>$40.99</b></p>
+            </li>
+            <li>
+              <Link class="winelink" to={`/`}><h3>Natura Organic Wine 750ml</h3></Link>
+              <div class="image-wrap">
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/natura_92fad8de15/natura_92fad8de15.jpg" altText="Cover for title" />
+              </div>
+              <p class="descriptionHoliday"><b>$13.99</b></p>
+            </li>
+            <li>
+              <Link class="winelink" to={`/`}><h3>Nayak Cognac 750ml</h3></Link>
+              <div class="image-wrap">
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/NYAK_121020186f/NYAK_121020186f.jpg" altText="Cover for title" />
+              </div>
+              <p class="descriptionHoliday"><b>$39.99</b></p>
+            </li>
+          </ul>
+        </div>
       </section>
       <div class="featuredWrapper">
         <h1 class="featuredHeader">Featured Product</h1>
@@ -149,7 +190,7 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-   
+
       {/* <div class="homePageWrapper">
         <ul class="postlist">
           {
