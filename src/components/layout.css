@@ -344,7 +344,8 @@ header a {
     text-align: center;
     padding: 2em 0;
     margin-top: 120px;
-    background-image: url("https://images.pexels.com/photos/756903/pexels-photo-756903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* background-image: url("https://images.pexels.com/photos/756903/pexels-photo-756903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
     /* background-image: url(../images/trending_xxl.jpg); */
     background-size: cover;
     background-position-y: center;
@@ -362,7 +363,7 @@ header a {
     font-weight: 400;
     font-style: normal;
     /* color: #3aa8e4; */
-    color: #ff5f24;
+    color: #f72cc5;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 
 
@@ -453,7 +454,7 @@ header a {
     background-image: url("../images/top_rated_chateau.jpeg");
     background-size: cover;
     background-position-x: -360px;
-    color:rgb(22 48 161);
+    color: rgb(22 48 161);
     height: 10em;
     text-align: center;
     border: none;
@@ -674,7 +675,7 @@ header a {
 
 .contactNoScroll a,
 .contactScroll a,
-.contactScrollMobile a  {
+.contactScrollMobile a {
     margin-right: 10px;
 }
 
@@ -709,7 +710,6 @@ header a {
 .holidayList .cover {
     object-fit: cover;
     width: 100%;
-    height: 12em;
 }
 
 .holidayList li {
@@ -717,6 +717,9 @@ header a {
     margin: 0.5em;
     border-radius: 1em;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .image-wrap {
@@ -862,7 +865,8 @@ footer p {
     color: white;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
-    font-style: normal;}
+    font-style: normal;
+}
 
 .contactPhone {
     color: rgb(22 48 161);
@@ -973,19 +977,20 @@ footer p {
     .trendingImageLink {
         width: 65%;
     }
+
     .heroText {
         padding: 3em;
     }
-    
+
     .blueRockNavLogo {
         margin-right: 10px;
         width: 80px;
     }
-    
+
     .navHeaderLink {
         margin: 8px 5px;
     }
-    
+
     .navHeaderLinkWrapperMobile [aria-current="page"] {
         font-size: 0.9em;
         margin: 8.5px 10px 0px 5px;

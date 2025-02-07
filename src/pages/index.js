@@ -76,8 +76,8 @@ const IndexPage = ({ data }) => {
       <section class="hero">
 
         <div class="heroText">
-          <h1 class="heroTextH1">Thanksgiving Deals</h1>
-          <p style={{ marginBottom: "10px" }}>Limited time only!</p>
+          <h1 class="heroTextH1">Valentine's Day Deals</h1>
+          {/* <p style={{ marginBottom: "10px" }}>Limited time only!</p> */}
           {/* <h1 class="heroTextH1">Trending Now</h1>
           <p style={{marginBottom: "10px"}}>Mango, Pineapple, & Peach</p>
           <Link to="/trending">
@@ -87,37 +87,37 @@ const IndexPage = ({ data }) => {
         <div>
           <ul class="holidayList">
             <li>
-              <Link class="winelink" to={`/`}><h3>Baileys 750ml</h3></Link>
+              <Link class="winelink" to={`/`}><h3>Hennessy 350ml</h3></Link>
               <div class="image-wrap">
-                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/IMG_7208_60ef73be6c/IMG_7208_60ef73be6c.jpg" altText="Cover for title" />
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/hennessy_350_2_a244d34d64/hennessy_350_2_a244d34d64.jpg" altText="Cover for title" />
               </div>
-              <p class="descriptionHoliday"><b>$33.99</b></p>
+              <p class="descriptionHoliday"><b>$36.99</b></p>
             </li>
             <li>
-              <Link class="winelink" to={`/`}><h3>Grey Goose 1 liter</h3></Link>
+              <Link class="winelink" to={`/`}><h3>Makers Mark 750ml</h3></Link>
               <div class="image-wrap">
-                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/grey_goose_460c8fe385/grey_goose_460c8fe385.jpg" altText="Cover for title" />
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/makers_750_ml_645d124011/makers_750_ml_645d124011.jpg" altText="Cover for title" />
               </div>
-              <p class="descriptionHoliday"><b>$32.99</b></p>
+              <p class="descriptionHoliday"><b>$29.99</b></p>
             </li>
             <li>
-              <Link class="winelink" to={`/`}><h3>Basil Hayden 750ml</h3></Link>
+              <Link class="winelink" to={`/`}><h3>Dark Horse Rose 750ml</h3></Link>
               <div class="image-wrap">
-                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/basil_hayden_d41855db22/basil_hayden_d41855db22.jpg" altText="Cover for title" />
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/dark_horse_rose_750ml_cfe88eab4d/dark_horse_rose_750ml_cfe88eab4d.jpg" altText="Cover for title" />
               </div>
-              <p class="descriptionHoliday"><b>$40.99</b></p>
+              <p class="descriptionHoliday"><b>$9.99</b></p>
             </li>
             <li>
-              <Link class="winelink" to={`/`}><h3>Natura Organic Wine 750ml</h3></Link>
+              <Link class="winelink" to={`/`}><h3>Apothic Crush 750ml</h3></Link>
               <div class="image-wrap">
-                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/natura_92fad8de15/natura_92fad8de15.jpg" altText="Cover for title" />
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/apothic_crush_750ml_e298df6a79/apothic_crush_750ml_e298df6a79.jpg" altText="Cover for title" />
               </div>
-              <p class="descriptionHoliday"><b>$13.99</b></p>
+              <p class="descriptionHoliday"><b>$11.99</b></p>
             </li>
             <li>
-              <Link class="winelink" to={`/`}><h3>Nayak Cognac 750ml</h3></Link>
+              <Link class="winelink" to={`/`}><h3>Force & Grace Cab-Sauvignon 750ml</h3></Link>
               <div class="image-wrap">
-                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/NYAK_121020186f/NYAK_121020186f.jpg" altText="Cover for title" />
+                <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/force_grace_cab_sauv_750ml_8f81b39879/force_grace_cab_sauv_750ml_8f81b39879.jpg" altText="Cover for title" />
               </div>
               <p class="descriptionHoliday"><b>$39.99</b></p>
             </li>
