@@ -119,7 +119,7 @@ const IndexPage = ({ data }) => {
               <div class="image-wrap">
                 <img class="cover" src="https://storage.googleapis.com/rocsites-assets/uploads-blue-rock/force_grace_cab_sauv_750ml_8f81b39879/force_grace_cab_sauv_750ml_8f81b39879.jpg" altText="Cover for title" />
               </div>
-              <p class="descriptionHoliday"><b>$39.99</b></p>
+              <p class="descriptionHoliday"><b>$27.99</b></p>
             </li>
           </ul>
         </div>
