@@ -344,7 +344,8 @@ header a {
     text-align: center;
     padding: 2em 0;
     margin-top: 120px;
-    background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.unsplash.com/photo-1711483667272-17b81cd68d32?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
     /* background-image: url("https://images.pexels.com/photos/756903/pexels-photo-756903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
     /* background-image: url(../images/trending_xxl.jpg); */
     background-size: cover;
@@ -363,8 +364,9 @@ header a {
     font-weight: 400;
     font-style: normal;
     /* color: #3aa8e4; */
-    color: #f72cc5;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    color: #f7f42c;
+    /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
+    text-shadow: 5px 5px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 
 }
